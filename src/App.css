@@ -1,38 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container-cube {
+  width: 11vw;
+  height: 22vh;
+  background-color: #0d88f3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cubespin div {
+  position: absolute;
+  width: 11vw;
+  height: 22vh;
+  border: 1px solid #cccccc;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+  line-height: 8.5rem;
+  text-align: center;
+  font-size: 6rem;
+}
+
+.cubespin .face1 {
+  transform: translateZ(60px);
+}
+
+.cubespin .face2 {
+  transform: rotateY(90deg) translateZ(60px);
+}
+
+.cubespin .face3 {
+  transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+}
+
+.cubespin .face4 {
+  transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+}
+
+.cubespin .face5 {
+  transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+}
+
+.cubespin .face6 {
+  transform: rotateX(-90deg) translateZ(60px);
 }
